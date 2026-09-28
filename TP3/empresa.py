@@ -4,24 +4,24 @@ from empleado import Empleado
 class Empresa:
     # Constructores
     def __init__(self,razonSocial):
-        self._razonSocial = razonSocial
-        self._productos = []
-        self._empleados = []
+        self.__razonSocial = razonSocial
+        self.__productos = []
+        self.__empleados = []
 
     # Comandos
     def establecerRazonSocial(self, razonSocial):
-        self._razonSocial = razonSocial
+        self.__razonSocial = razonSocial
 
     def agregarProducto(self, producto):
-        self._productos.append(producto)
+        self.__productos.append(producto)
 
     def removerProducto(self,producto):
         if producto in self._productos: 
-            self._productos.remove(producto)
+            self.__productos.remove(producto)
             
     def altaEmpleado(self, empleado):
         # 1. Obtener todos los legajos existentes
-        legajos = [emp.obtenerNumeroLegajo() for emp in self._empleados]
+        legajos = [emp.obtenerNumeroLegajo() for emp in self.__empleados]
 
         # 2. Calcular el siguiente número de legajo
         if legajos:
@@ -34,28 +34,28 @@ class Empresa:
         empleado.establecerEstado(Empleado.ESTADO_ALTA)
 
         # 4. Agregar el empleado a la lista
-        self._empleados.append(empleado)
+        self.__empleados.append(empleado)
             
     def bajaEmpleado(self, empleado):
-        if empleado in self._empleados:
+        if empleado in self.__empleados:
             empleado.establecerEstado(empleado.ESTADO_BAJA)
 
     # Consultas
     def obtenerRazonSocial(self):
-        return self._razonSocial
+        return self.__razonSocial
 
     def obtenerProductos(self):
-        return self._productos
+        return self.__productos
 
     def obtenerEmpleadosDeAlta(self):
         empleados_alta = []
-        for emp in self._empleados:
+        for emp in self.__empleados:
             if emp.obtenerEstado() == emp.ESTADO_ALTA:
                 empleados_alta.append(emp)
         return empleados_alta
 
     def obtenerEmpleadosHitorico(self):
-        return self._empleados
+        return self.__empleados
 
     
 

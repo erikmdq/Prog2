@@ -12,7 +12,7 @@ class Producto:
     # Método de equivalencia
     def __eq__(self,otro):
         if isinstance(otro, Producto):
-            return self.__nombre = otro.__nombre
+            return self.__nombre == otro.__nombre
         return False
 
     
