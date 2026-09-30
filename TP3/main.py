@@ -36,6 +36,6 @@ empresa_2.agregarProducto(producto_4)
 empresa_1.bajaEmpleado(empleado_1)
 empresa_1.bajaEmpleado(empleado_2)
 
-print(str(empresa_1))
+print(empresa_1)
 print("####################")
 print(empresa_2)

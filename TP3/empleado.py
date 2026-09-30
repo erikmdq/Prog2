@@ -42,5 +42,5 @@ class Empleado:
 
     def __eq__(self,otro):
         if isinstance(otro,Empleado):
-            return self.__numero_Legajo == otro.__numero_Legajo
+            return self.__numeroLegajo == otro.__numeroLegajo
         return False
