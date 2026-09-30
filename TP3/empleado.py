@@ -37,11 +37,10 @@ class Empleado:
 
     
     def __str__(self):
-        estado_str = (
-            "ALTA" if self.__estado == Empleado.ESTADO_ALTA else "BAJA"
-        )
-        return f"Empleado Legajo N° {self.__numeroLegajo}: {self.__nombres} {self.__apellidos} [{estado_str}]"
+        estado = "ALTA" if self.__estado == Empleado.ESTADO_ALTA else "BAJA"
+        return f"Empleado Legajo N° {self.__numeroLegajo}: {self.__nombres} {self.__apellidos} [{estado}]"
 
-    
-
-    
+    def __eq__(self,otro):
+        if isinstance(otro,Empleado):
+            return self.__numero_Legajo == otro.__numero_Legajo
+        return False

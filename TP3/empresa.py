@@ -57,6 +57,11 @@ class Empresa:
     def obtenerEmpleadosHitorico(self):
         return self.__empleados
 
-    
+    def __str__(self):
+        return f"Nombre de la empresa: {self.__razonSocial}\n Empleados:{self.obtenerEmpleadosHitorico}\n Producos: {self.obtenerProductos}"
 
+    def __eq__(self,otro):
+        if isinstance(otro,Empresa):
+                    return self.__razonSocial == otro.__razonSocial
+        return False
 
