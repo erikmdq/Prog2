@@ -54,11 +54,24 @@ class Empresa:
                 empleados_alta.append(emp)
         return empleados_alta
 
-    def obtenerEmpleadosHitorico(self):
+    def obtenerEmpleadosHistorico(self):
         return self.__empleados
 
     def __str__(self):
-        return f"Nombre de la empresa: {self.__razonSocial}\n Empleados:{self.obtenerEmpleadosHitorico}\n Producos: {self.obtenerProductos}"
+        prods = (
+            "\n".join([f"  - {p}" for p in self.obtenerProductos()])
+            if self.obtenerProductos()
+            else "  (Sin productos)"
+        )
+
+        emps = (
+            "\n".join([f"  - {e}" for e in self.obtenerEmpleadosHistorico()])
+            if self.obtenerEmpleadosHistorico()
+            else "  (Sin empleados)"
+        )
+
+
+        return f"Nombre de la empresa: {self.__razonSocial}\n Empleados:\n{emps}\n Producos\n: {prods}"
 
     def __eq__(self,otro):
         if isinstance(otro,Empresa):
