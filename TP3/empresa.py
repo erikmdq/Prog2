@@ -16,7 +16,7 @@ class Empresa:
         self.__productos.append(producto)
 
     def removerProducto(self,producto):
-        if producto in self._productos: 
+        if producto in self.__productos: 
             self.__productos.remove(producto)
             
     def altaEmpleado(self, empleado):
@@ -67,8 +67,8 @@ class Empresa:
         )
 
         emps = (
-            "\n".join([f"  - {e}" for e in self.obtenerEmpleadosHistorico()])
-            if self.obtenerEmpleadosHistorico()
+            "\n".join([f"  - {e}" for e in self.obtenerEmpleadosDeAlta()])
+            if self.obtenerEmpleadosDeAlta()
             else "  (Sin empleados)"
         )
 
