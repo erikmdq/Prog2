@@ -21,7 +21,9 @@ class Empresa:
             
     def altaEmpleado(self, empleado):
         # 1. Obtener todos los legajos existentes
-        legajos = [emp.obtenerNumeroLegajo() for emp in self.__empleados]
+        legajos = []
+        for emp in self.__empleados:
+            legajos.append(emp.obtenerNumeroLegajo())
 
         # 2. Calcular el siguiente número de legajo
         if legajos:
@@ -71,7 +73,7 @@ class Empresa:
         )
 
 
-        return f"Nombre de la empresa: {self.__razonSocial}\n Empleados:\n{emps}\n Producos\n: {prods}"
+        return f"Nombre de la empresa: {self.__razonSocial}\n Empleados:\n{emps}\n Producos:\n{prods}"
 
     def __eq__(self,otro):
         if isinstance(otro,Empresa):

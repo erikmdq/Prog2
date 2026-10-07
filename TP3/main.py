@@ -37,5 +37,5 @@ empresa_1.bajaEmpleado(empleado_1)
 empresa_1.bajaEmpleado(empleado_2)
 
 print(empresa_1)
-print("####################")
+print("#############################################")
 print(empresa_2)
