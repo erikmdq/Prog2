@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "nombre": "Zoológico de Concordia",
+        "animales": [
+            {
+                "id": 1,
+                "nombre": "Mercurio",
+                "id_cuidador_principal": 1,
+                "largo_cuello": 180,
+                "tipo": "jirafa"
+            },
+            {
+                "id": 2,
+                "nombre": "Sol",
+                "id_cuidador_principal": 1,
+                "largo_alas": 100,
+                "largo_pico": 6,
+                "tipo": "aguila"
+            },
+            {
+                "id": 3,
+                "nombre": "Tierra",
+                "id_cuidador_principal": 2,
+                "largo_cuerno": 50,
+                "tipo": "rinoceronte"
+            },
+            {
+                "id": 4,
+                "nombre": "Marte",
+                "id_cuidador_principal": 1,
+                "largo_cuerno": 54,
+                "tipo": "rinoceronte"
+            }
+        ],
+        "empleados": [
+            {
+                "id": 1,
+                "nombres": "Martin",
+                "apellidos": "Martinez"
+            },
+            {
+                "id": 2,
+                "nombres": "Ramiro",
+                "apellidos": "Ramirez"
+            },
+            {
+                "id": 3,
+                "nombres": "Fernando",
+                "apellidos": "Fernandez"
+            }
+        ]
+    }
+]
